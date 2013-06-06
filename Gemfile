@@ -11,7 +11,7 @@ else
   raise "You need define an adapter in your database.yml or set your RAILS_ENV variable" if adapter == '' || adapter.nil?
   case adapter
   when 'sqlite3'
-    gem 'sqlite3'
+    gem 'sqlite3-ruby', :require => 'sqlite3'
   when 'postgresql'
     gem 'pg', '~> 0.14.1'
   when 'mysql2'
@@ -66,6 +66,12 @@ group :test, :development do
   gem 'rcov', '0.9.11'  #rcov not support rails version 3.2.13, using 0.9.11 instead
   gem 'delorean'
   gem 'watchr'
+  gem 'better_errors'
+  gem 'pry'
+  gem 'pry-remote'
+  gem 'pry-nav'
+  gem 'pry-rails'
+  gem 'pry-doc'
   # gem "capybara"
   # gem 'yard'
   # gem "bluecloth"
