@@ -59,13 +59,13 @@ gem 'nokogiri'
 gem 'SystemTimer' if RUBY_VERSION =~ /^1.8/
 
 group :test, :development do
-  gem "rspec", "~> 2.0"
-  gem "rspec-rails", "~> 2.0"
-  gem "factory_girl_rails"
-  gem "shoulda-matchers"
-  gem "rcov"
-  gem "delorean"
-  gem "watchr"
+  gem 'rspec', '~> 2.0'
+  gem 'rspec-rails', '~> 2.0'
+  gem 'factory_girl_rails'
+  gem 'shoulda-matchers'
+  gem 'rcov', '0.9.11'  #rcov not support rails version 3.2.13, using 0.9.11 instead
+  gem 'delorean'
+  gem 'watchr'
   # gem "capybara"
   # gem 'yard'
   # gem "bluecloth"
